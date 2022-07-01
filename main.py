@@ -9,7 +9,7 @@ Google_Form_Name="Form+Responses+1"
 Sign_My_GuestBookMessage = """Want to sign my guestbook? Click here <a href="github.com">Sign Here</a>"""
 
 ## Results to fetch 
-MAX_RESULTS = os.environ.get("INPUT_SECONDS")
+MAX_RESULTS = float(os.environ.get("INPUT_SECONDS"))
 
 
 
