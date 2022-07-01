@@ -2,7 +2,6 @@ import os
 import requests, json 
 
 
-wait_time = os.environ.get("INPUT_SECONDS")
 
 Google_Form_ID="12dHNazq1AW04WG8DHy0-qKsqejpT6urRY0EgGRfPxdc"  
 Google_Form_Name="Form+Responses+1"
@@ -10,7 +9,8 @@ Google_Form_Name="Form+Responses+1"
 Sign_My_GuestBookMessage = """Want to sign my guestbook? Click here <a href="github.com">Sign Here</a>"""
 
 ## Results to fetch 
-MAX_RESULTS = 5 
+MAX_RESULTS = os.environ.get("INPUT_SECONDS")
+
 
 
 
