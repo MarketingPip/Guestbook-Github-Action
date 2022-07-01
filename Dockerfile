@@ -3,8 +3,8 @@ RUN sudo sh -c "echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' >>
 RUN apt-get update && apt-get install -y apt-transport-https
 RUN apt-get update && apt purge google-chrome-stable
 RUN sudo apt-get update
-RUN sudo apt-get install python3.6
+RUN sudo apt-get install -y  python3.6
 RUN sudo apt-get update
-RUN sudo apt-get install python3-pip
+RUN sudo apt-get install -y  python3-pip
 RUN pip install chromedriver-autoinstaller selenium pyvirtualdisplay 
-RUN CMD ["python3 main.py"]
+RUN CMD ["python3.6 main.py"]
