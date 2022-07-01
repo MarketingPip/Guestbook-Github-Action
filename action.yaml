@@ -12,3 +12,4 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+run: echo "hello world"  
