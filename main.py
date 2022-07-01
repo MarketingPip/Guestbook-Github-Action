@@ -60,9 +60,10 @@ FileName = "README.md"
 with open(FileName, 'r') as f:
     contents = f.read()
     # Define the first line where your content will be replaced / added 
-    starting_text = '<!---START OF CONTENT --->'
+    starting_text =  contents.split('<!---START OF CONTENT --->',1)
     # Define the second line where your content will be replaced / added 
-    ending_text = '<!---END OF CONTENT --->'
+    ending_text = contents.split('<!---END OF CONTENT --->',1) 
+   
     to_replace = contents[contents.find(starting_text)+len(starting_text):contents.find(ending_text)]
     contents = contents.replace(to_replace, Template)
 print(Template)   
